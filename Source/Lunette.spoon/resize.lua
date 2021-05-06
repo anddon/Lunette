@@ -49,6 +49,20 @@ function obj:topHalf(window, screen)
   return window
 end
 
+function obj:topQuarter(window, screen)
+  window.y = screen.y
+  window.h = screen.h // 4
+
+  return window
+end
+
+function obj:topThreeQuarters(window, screen)
+  window.y = screen.y
+  window.h = (screen.h // 4) * 3
+
+  return window
+end
+
 function obj:topThird(window, screen)
   window.y = screen.y
   window.h = screen.h // 3
@@ -75,6 +89,20 @@ end
 function obj:bottomHalf(window, screen)
   window.y = (screen.h // 2) + screen.y
   window.h = screen.h // 2
+
+  return window
+end
+
+function obj:bottomQuarter(window, screen)
+  window.y = ((screen.h // 4) * 3) + screen.y
+  window.h = screen.h // 4
+
+  return window
+end
+
+function obj:bottomThreeQuarters(window, screen)
+  window.y = (screen.h // 4) + screen.y
+  window.h = (screen.h // 4) * 3
 
   return window
 end
@@ -108,6 +136,20 @@ function obj:leftHalf(window, screen)
   return window
 end
 
+function obj:leftQuarter(window, screen)
+  window.x = screen.x
+  window.w = screen.w // 4
+
+  return window
+end
+
+function obj:leftThreeQuarters(window, screen)
+  window.x = screen.x
+  window.w = (screen.w // 4) * 3
+
+  return window
+end
+
 function obj:leftThird(window, screen)
   window.x = screen.x
   window.w = screen.w // 3
@@ -134,6 +176,20 @@ end
 function obj:rightHalf(window, screen)
   window.x = (screen.w // 2) + screen.x
   window.w = screen.w // 2
+
+  return window
+end
+
+function obj:rightQuarter(window, screen)
+  window.x = (screen.w // 4) * 3 + screen.x
+  window.w = screen.w // 4
+
+  return window
+end
+
+function obj:rightThreeQuarters(window, screen)
+  window.x = (screen.w // 4) + screen.x
+  window.w = (screen.w // 4) * 3
 
   return window
 end

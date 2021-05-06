@@ -7,6 +7,16 @@ function obj:topHalf(window, screen)
          window.h == (screen.h // 2)
 end
 
+function obj:topQuarter(window, screen)
+  return window.y == screen.y and
+         window.h == (screen.h // 4)
+end
+
+function obj:topThreeQuarters(window, screen)
+  return window.y == screen.y and
+         window.h == ((screen.h // 4) * 3)
+end
+
 function obj:topThird(window, screen)
   return window.y == screen.y and
          window.h == (screen.h // 3)
@@ -26,6 +36,16 @@ end
 function obj:bottomHalf(window, screen)
   return window.y == (screen.h // 2) + screen.y and
          window.h == screen.h // 2
+end
+
+function obj:bottomQuarter(window, screen)
+  return window.y == (((screen.h // 4) * 3) + screen.y) and
+         window.h == (screen.h // 4)
+end
+
+function obj:bottomThreeQuarters(window, screen)
+  return window.y == ((screen.h // 4) + screen.y) and
+         window.h == ((screen.h // 4) * 3)
 end
 
 function obj:bottomThird(window, screen)
@@ -49,6 +69,16 @@ function obj:leftHalf(window, screen)
          window.w == screen.w // 2
 end
 
+function obj:leftQuarter(window, screen)
+  return window.x == screen.x and
+         window.w == screen.w // 4
+end
+
+function obj:leftThreeQuarters(window, screen)
+  return window.x == screen.x and
+         window.w == (screen.w // 4) * 3
+end
+
 function obj:leftThird(window, screen)
   return window.x == screen.x and
          window.w == (screen.w // 3)
@@ -69,6 +99,16 @@ end
 function obj:rightHalf(window, screen)
   return window.x == (screen.w // 2) + screen.x and
          window.w == screen.w // 2
+end
+
+function obj:rightQuarter(window, screen)
+  return window.x == (screen.w // 4) * 3 + screen.x and
+         window.w == screen.w // 4
+end
+
+function obj:rightThreeQuarters(window, screen)
+  return window.x == ((screen.w // 4) + screen.x) and
+         window.w == ((screen.w // 4) * 3)
 end
 
 function obj:rightThird(window, screen)

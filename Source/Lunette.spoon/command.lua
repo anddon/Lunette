@@ -46,14 +46,23 @@ end
 obj.leftHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:leftTwoThirds(windowFrame, screenFrame) then
-    newFrame = Resize:leftFull(windowFrame, screenFrame)
-  elseif Validate:leftHalf(windowFrame, screenFrame) then
-    newFrame = Resize:leftTwoThirds(windowFrame, screenFrame)
+  if Validate:leftQuarter(windowFrame, screenFrame) then
+    newFrame = Resize:leftThird(windowFrame, screenFrame)
+
   elseif Validate:leftThird(windowFrame, screenFrame) then
     newFrame = Resize:leftHalf(windowFrame, screenFrame)
+
+  elseif Validate:leftHalf(windowFrame, screenFrame) then
+    newFrame = Resize:leftTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:leftTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:leftThreeQuarters(windowFrame, screenFrame)
+
+  elseif Validate:leftThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:leftFull(windowFrame, screenFrame)
+
   else
-    newFrame = Resize:leftThird(windowFrame, screenFrame)
+    newFrame = Resize:leftQuarter(windowFrame, screenFrame)
   end
 
   return newFrame
@@ -69,14 +78,23 @@ end
 obj.topHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:topTwoThirds(windowFrame, screenFrame) then
-    newFrame = Resize:topFull(windowFrame, screenFrame)
-  elseif Validate:topHalf(windowFrame, screenFrame) then
-    newFrame = Resize:topTwoThirds(windowFrame, screenFrame)
+  if Validate:topQuarter(windowFrame, screenFrame) then
+    newFrame = Resize:topThird(windowFrame, screenFrame)
+
   elseif Validate:topThird(windowFrame, screenFrame) then
     newFrame = Resize:topHalf(windowFrame, screenFrame)
+
+  elseif Validate:topHalf(windowFrame, screenFrame) then
+    newFrame = Resize:topTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:topTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:topThreeQuarters(windowFrame, screenFrame)
+
+  elseif Validate:topThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:topFull(windowFrame, screenFrame)
+
   else
-    newFrame = Resize:topThird(windowFrame, screenFrame)
+    newFrame = Resize:topQuarter(windowFrame, screenFrame)
   end
 
   return newFrame
@@ -92,14 +110,23 @@ end
 obj.bottomHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:bottomTwoThirds(windowFrame, screenFrame) then
-    newFrame = Resize:bottomFull(windowFrame, screenFrame)
-  elseif Validate:bottomHalf(windowFrame, screenFrame) then
-    newFrame = Resize:bottomTwoThirds(windowFrame, screenFrame)
+  if Validate:bottomQuarter(windowFrame, screenFrame) then
+    newFrame = Resize:bottomThird(windowFrame, screenFrame)
+
   elseif Validate:bottomThird(windowFrame, screenFrame) then
     newFrame = Resize:bottomHalf(windowFrame, screenFrame)
+
+  elseif Validate:bottomHalf(windowFrame, screenFrame) then
+    newFrame = Resize:bottomTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:bottomTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:bottomThreeQuarters(windowFrame, screenFrame)
+
+  elseif Validate:bottomThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:bottomFull(windowFrame, screenFrame)
+
   else
-    newFrame = Resize:bottomThird(windowFrame, screenFrame)
+    newFrame = Resize:bottomQuarter(windowFrame, screenFrame)
   end
 
   return newFrame
@@ -117,14 +144,23 @@ end
 obj.rightHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:rightTwoThirds(windowFrame, screenFrame) then
-    newFrame = Resize:rightFull(windowFrame, screenFrame)
-  elseif Validate:rightHalf(windowFrame, screenFrame) then
-    newFrame = Resize:rightTwoThirds(windowFrame, screenFrame)
+  if Validate:rightQuarter(windowFrame, screenFrame) then
+    newFrame = Resize:rightThird(windowFrame, screenFrame)
+
   elseif Validate:rightThird(windowFrame, screenFrame) then
     newFrame = Resize:rightHalf(windowFrame, screenFrame)
+
+  elseif Validate:rightHalf(windowFrame, screenFrame) then
+    newFrame = Resize:rightTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:rightTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:rightThreeQuarters(windowFrame, screenFrame)
+
+  elseif Validate:rightThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:rightFull(windowFrame, screenFrame)
+
   else
-    newFrame = Resize:rightThird(windowFrame, screenFrame)
+    newFrame = Resize:rightQuarter(windowFrame, screenFrame)
   end
 
   return newFrame
