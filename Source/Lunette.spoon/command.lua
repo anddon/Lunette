@@ -46,23 +46,26 @@ end
 obj.leftHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:leftQuarter(windowFrame, screenFrame) then
-    newFrame = Resize:leftThird(windowFrame, screenFrame)
-
-  elseif Validate:leftThird(windowFrame, screenFrame) then
-    newFrame = Resize:leftHalf(windowFrame, screenFrame)
-
-  elseif Validate:leftHalf(windowFrame, screenFrame) then
-    newFrame = Resize:leftTwoThirds(windowFrame, screenFrame)
-
-  elseif Validate:leftTwoThirds(windowFrame, screenFrame) then
+  if Validate:leftFull(windowFrame, screenFrame) then
     newFrame = Resize:leftThreeQuarters(windowFrame, screenFrame)
 
   elseif Validate:leftThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:leftTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:leftTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:leftHalf(windowFrame, screenFrame)
+
+  elseif Validate:leftHalf(windowFrame, screenFrame) then
+    newFrame = Resize:leftThird(windowFrame, screenFrame)
+
+  elseif Validate:leftThird(windowFrame, screenFrame) then
+    newFrame = Resize:leftQuarter(windowFrame, screenFrame)
+
+  elseif Validate:leftQuarter(windowFrame, screenFrame) then
     newFrame = Resize:leftFull(windowFrame, screenFrame)
 
   else
-    newFrame = Resize:leftQuarter(windowFrame, screenFrame)
+    newFrame = Resize:leftHalf(windowFrame, screenFrame)
   end
 
   return newFrame
@@ -78,29 +81,37 @@ end
 obj.topHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:topQuarter(windowFrame, screenFrame) then
-    newFrame = Resize:topThird(windowFrame, screenFrame)
-
-  elseif Validate:topThird(windowFrame, screenFrame) then
-    newFrame = Resize:topHalf(windowFrame, screenFrame)
-
-  elseif Validate:topHalf(windowFrame, screenFrame) then
-    newFrame = Resize:topTwoThirds(windowFrame, screenFrame)
-
-  elseif Validate:topTwoThirds(windowFrame, screenFrame) then
+  if Validate:topFull(windowFrame, screenFrame) then
     newFrame = Resize:topThreeQuarters(windowFrame, screenFrame)
 
   elseif Validate:topThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:topTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:topTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:topHalf(windowFrame, screenFrame)
+
+  elseif Validate:topHalf(windowFrame, screenFrame) then
+    newFrame = Resize:topThird(windowFrame, screenFrame)
+
+  elseif Validate:topThird(windowFrame, screenFrame) then
+    newFrame = Resize:topQuarter(windowFrame, screenFrame)
+
+  elseif Validate:topQuarter(windowFrame, screenFrame) then
     newFrame = Resize:topFull(windowFrame, screenFrame)
 
   else
-    newFrame = Resize:topQuarter(windowFrame, screenFrame)
+    newFrame = Resize:topHalf(windowFrame, screenFrame)
   end
 
   return newFrame
 end
 
---- Command:bottomHalf(windowFrame, screenFrame)
+
+
+
+
+
+-- --- Command:bottomHalf(windowFrame, screenFrame)
 --- Method
 --- Inspects current screen frame position, determines how to resize given frame
 --- and calls corresponding resize method
@@ -110,23 +121,26 @@ end
 obj.bottomHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:bottomQuarter(windowFrame, screenFrame) then
-    newFrame = Resize:bottomThird(windowFrame, screenFrame)
-
-  elseif Validate:bottomThird(windowFrame, screenFrame) then
-    newFrame = Resize:bottomHalf(windowFrame, screenFrame)
-
-  elseif Validate:bottomHalf(windowFrame, screenFrame) then
-    newFrame = Resize:bottomTwoThirds(windowFrame, screenFrame)
-
-  elseif Validate:bottomTwoThirds(windowFrame, screenFrame) then
+  if Validate:bottomFull(windowFrame, screenFrame) then
     newFrame = Resize:bottomThreeQuarters(windowFrame, screenFrame)
 
   elseif Validate:bottomThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:bottomTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:bottomTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:bottomHalf(windowFrame, screenFrame)
+
+  elseif Validate:bottomHalf(windowFrame, screenFrame) then
+    newFrame = Resize:bottomThird(windowFrame, screenFrame)
+
+  elseif Validate:bottomThird(windowFrame, screenFrame) then
+    newFrame = Resize:bottomQuarter(windowFrame, screenFrame)
+
+  elseif Validate:bottomQuarter(windowFrame, screenFrame) then
     newFrame = Resize:bottomFull(windowFrame, screenFrame)
 
   else
-    newFrame = Resize:bottomQuarter(windowFrame, screenFrame)
+    newFrame = Resize:bottomHalf(windowFrame, screenFrame)
   end
 
   return newFrame
@@ -144,23 +158,26 @@ end
 obj.rightHalf = function(windowFrame, screenFrame)
   local newFrame
 
-  if Validate:rightQuarter(windowFrame, screenFrame) then
-    newFrame = Resize:rightThird(windowFrame, screenFrame)
-
-  elseif Validate:rightThird(windowFrame, screenFrame) then
-    newFrame = Resize:rightHalf(windowFrame, screenFrame)
-
-  elseif Validate:rightHalf(windowFrame, screenFrame) then
-    newFrame = Resize:rightTwoThirds(windowFrame, screenFrame)
-
-  elseif Validate:rightTwoThirds(windowFrame, screenFrame) then
+  if Validate:rightFull(windowFrame, screenFrame) then
     newFrame = Resize:rightThreeQuarters(windowFrame, screenFrame)
 
   elseif Validate:rightThreeQuarters(windowFrame, screenFrame) then
+    newFrame = Resize:rightTwoThirds(windowFrame, screenFrame)
+
+  elseif Validate:rightTwoThirds(windowFrame, screenFrame) then
+    newFrame = Resize:rightHalf(windowFrame, screenFrame)
+
+  elseif Validate:rightHalf(windowFrame, screenFrame) then
+    newFrame = Resize:rightThird(windowFrame, screenFrame)
+
+  elseif Validate:rightThird(windowFrame, screenFrame) then
+    newFrame = Resize:rightQuarter(windowFrame, screenFrame)
+
+  elseif Validate:rightQuarter(windowFrame, screenFrame) then
     newFrame = Resize:rightFull(windowFrame, screenFrame)
 
   else
-    newFrame = Resize:rightQuarter(windowFrame, screenFrame)
+    newFrame = Resize:rightHalf(windowFrame, screenFrame)
   end
 
   return newFrame
